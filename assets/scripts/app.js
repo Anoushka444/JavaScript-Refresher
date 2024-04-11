@@ -59,7 +59,7 @@ console.log(obj1.age);
 console.log(obj2.age);
 console.log(obj1);
 
-*/
+
 //Array & Array Methods like map()
 const hobbiies = ['sports', 'read', 'write'];
 console.log(hobbiies[0]);
@@ -74,6 +74,35 @@ const editedhobbies = hobbiies.map((item) => item + '!'); //map does not edit th
 console.log(editedhobbies);
 
 
-//we can use map to transform any item to any other kind of item 
+//we can use map to transform any item to any other kind of item
 
 const editedhobbies = hobbiies.map((item) => ({ text: item })); //({this tells JS that this will accept object as a value})
+*/
+
+//This is the spread operator
+const hobbies = ["sports", "writing"];
+const user = {
+    name: 'Anoushka',
+    age: 25
+};
+const newHobbies = ['reading'];
+
+const mergedHobbies = [...hobbies];
+console.log(mergedHobbies);
+
+
+const mergedHobbies1 = [...hobbies, ...newHobbies];
+console.log(mergedHobbies1);
+
+
+const mergedHobbies2 = [hobbies, newHobbies];
+console.log(mergedHobbies2);
+
+//also works on object
+const extendedUser = {
+    isAdmin: true,
+    day: 'Monday',
+    ...user
+}
+
+console.log(extendedUser)
