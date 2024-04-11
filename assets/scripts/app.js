@@ -22,12 +22,12 @@
 // console.log("hi");
 //}
 
-//Arrow Functions 
+//Arrow Functions
 /*export default (username, message) => {
     console.log("hi");
     return username + message;
 };
-*/
+
 
 const user = {
     name: 'Anoushka',
@@ -58,3 +58,22 @@ const obj2 = new User("Chetan", 26);
 console.log(obj1.age);
 console.log(obj2.age);
 console.log(obj1);
+
+*/
+//Array & Array Methods like map()
+const hobbiies = ['sports', 'read', 'write'];
+console.log(hobbiies[0]);
+
+hobbiies.push('Working');
+console.log(hobbiies);
+
+//const index = hobbiies.findIndex(item) => item === "sleep";
+//console.log(index);
+
+const editedhobbies = hobbiies.map((item) => item + '!'); //map does not edit the existing array, instead returns a new array
+console.log(editedhobbies);
+
+
+//we can use map to transform any item to any other kind of item 
+
+const editedhobbies = hobbiies.map((item) => ({ text: item })); //({this tells JS that this will accept object as a value})
